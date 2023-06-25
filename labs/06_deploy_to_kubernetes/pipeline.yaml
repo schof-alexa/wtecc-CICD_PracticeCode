@@ -7,6 +7,7 @@ spec:
     - name: pipeline-workspace
   params:
     - name: build-image
+    - name: app-name
     - name: repo-url
     - name: branch
       default: master
