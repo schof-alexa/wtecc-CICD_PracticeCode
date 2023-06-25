@@ -57,7 +57,7 @@ spec:
       - name: args
         value: "-v --with-spec --spec-color"
       runAfter:
-        - lint
+        - clone
 
     - name: build
       workspaces:
@@ -71,6 +71,7 @@ spec:
         value: "$(params.build-image)"
       runAfter:
         - tests
+        - lint
 
     - name: deploy
       taskRef:
